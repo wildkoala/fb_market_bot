@@ -36,6 +36,19 @@ print ("Logged In")
 	# Get the price
 	
 # search ebay for it - pretty sure there's an api for this too
+# findCompletedItems is the name of the call on Ebay's API
+# i can make 5,00 calls to ebay per day. That should be more than enough.
+'''
+https://svcs.ebay.com/services/search/FindingService/v1?OPERATION-NAME=findCompletedItems
+   &SERVICE-VERSION=1.0.0
+   &SECURITY-APPNAME=YourAppID
+   &RESPONSE-DATA-FORMAT=XML
+   &REST-PAYLOAD
+   &keywords=commodore%20vic-20
+'''
+
+# sanbox endpoint: https://svcs.sandbox.ebay.com/services/search/FindingService/v1
+
 	# Give the name
 	# Check the listings that have sold in the past month.
 	# Calculate the average price of these
