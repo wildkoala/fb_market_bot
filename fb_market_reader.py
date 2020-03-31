@@ -1,7 +1,46 @@
 # FLIP SOURCING
-
+from selenium import webdriver 
+from time import sleep 
+  
 # INTERACTION WITH FB MARKETPLACE
-# read fb marketplace listing
+
+# go to facebook market place
+driver = webdriver.Chrome() 
+driver.get('https://www.facebook.com/marketplace') 
+print ("Opened facebook marketplace") 
+sleep(1) 
+
+# get user login info
+usr=input('Enter Email Id:\n> ')  
+pwd=input('Enter Password:\n> ') 
+
+# put in email address
+username_box = driver.find_element_by_id('email') 
+username_box.send_keys(usr) 
+print ("Email Id entered") 
+sleep(1) 
+
+# put in password
+password_box = driver.find_element_by_id('pass') 
+password_box.send_keys(pwd) 
+print ("Password entered") 
+
+# click login button
+login_box = driver.find_element_by_id('loginbutton') 
+login_box.click() 
+  
+print ("Logged In") 
+
+# read first fb marketplace listing
+	# Get the name of it
+	# Get the price
+	
+# search ebay for it - pretty sure there's an api for this too
+	# Give the name
+	# Check the listings that have sold in the past month.
+	# Calculate the average price of these
+
+
 # check if the listing is 20% lower than the average
 	# of the last 5 of them sold on ebay (shipping + cost)
 # send me a text saying that we've got a potential flip:
